@@ -14,69 +14,71 @@
       color: #222;
       text-align: center;
     }
-
     h1 {
       margin-bottom: 30px;
     }
-
     .platform {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      margin: 20px 0;
+      margin: 40px 0;
     }
-
     .platform img {
       width: 32px;
       height: 32px;
     }
-
+    .silver-logo {
+      filter: brightness(0) saturate(100%) invert(85%) sepia(8%) saturate(210%) hue-rotate(185deg) brightness(95%) contrast(88%);
+    }
     a.button {
       display: inline-block;
       padding: 12px 24px;
-      margin-top: 10px;
+      margin-top: 0px;
       color: #fff;
       background-color: #007bff;
       text-decoration: none;
       border-radius: 6px;
       transition: background-color 0.2s ease-in-out;
     }
-
     a.button:hover {
       background-color: #0056b3;
     }
-
     .note {
       margin-top: 40px;
       font-size: 0.9em;
       color: #666;
     }
+    .platform {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px; /* reduce from default (if any) */
+    }
+
   </style>
 </head>
 <body>
   <h1>Download Templater</h1>
-
   <!-- iOS Section -->
   <div class="platform">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="iOS" />
+    <img class="silver-logo" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS" />
     <strong>iOS</strong>
   </div>
-  <a class="button" href="https://apps.apple.com/app/id6475828877">
+  <a class="button" href="https://apps.apple.com/app/templater-graphics-and-video/id6749022452">
     View on App Store
   </a>
-
   <!-- Android Section -->
-  <div class="platform">
+  <div class="platform" style="margin-top: 64px;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" />
     <strong>Android</strong>
   </div>
   <a class="button" href="https://github.com/templaterapp/templater-info/releases/download/v1.0.1/app-release.apk" download>
     Download APK
   </a>
-
   <p class="note">
-    Note: On Android, you may need to allow unknown apps in your settings to install the APK.
+    Templater is not yet on the Google Play store, but you can download this official APK instead. 
+    Templater will be on the Play Store in a few weeks.
   </p>
 </body>
 </html>
