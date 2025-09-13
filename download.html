@@ -17,65 +17,50 @@
     h1 {
       margin-bottom: 30px;
     }
-    .platform {
+    .download-buttons {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 40px 0;
+      gap: 30px;
+      margin-top: 30px;
     }
-    .platform img {
-      width: 32px;
-      height: 32px;
-    }
-    .silver-logo {
-      filter: brightness(0) saturate(100%) invert(85%) sepia(8%) saturate(210%) hue-rotate(185deg) brightness(95%) contrast(88%);
-    }
-    a.button {
+    
+    .download-buttons a {
       display: inline-block;
-      padding: 12px 24px;
-      margin-top: 0px;
-      color: #fff;
-      background-color: #007bff;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.2s ease-in-out;
+      border-radius: 12px;
+      transition: transform 0.2s ease, filter 0.2s ease;
     }
-    a.button:hover {
-      background-color: #0056b3;
+    
+    .download-buttons img {
+      max-width: 200px;
+      height: auto;
+      cursor: pointer;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     }
-    .note {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
+    
+    .download-buttons a:hover {
+      transform: translateY(-2px);
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
     }
-    .platform {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px; /* reduce from default (if any) */
+    
+    .download-buttons a:active {
+      transform: translateY(1px);
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
     }
-
   </style>
 </head>
 <body>
-  <img src="templater_logo.png" alt="Templater Logo" style="width: 128px; height: auto; margin-bottom: 20px;" />
-  <h1>Download Templater</h1>
-  <!-- iOS Section -->
-  <div class="platform">
-    <img class="silver-logo" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iOS" />
-    <strong>iOS</strong>
+  <img src="assets/templater_logo.png" alt="Templater Logo" style="width: 128px; height: auto; margin-bottom: 20px;" />
+  <h1>Templater</h1>
+  <div class="download-buttons">
+    <!-- iOS Section -->
+    <a href="https://apps.apple.com/app/templater-graphics-and-video/id6749022452">
+      <img src="assets/appstore.png" alt="Download on the App Store"/>
+    </a>
+    <!-- Android Section -->
+    <a href="https://play.google.com/store/apps/details?id=com.templater.app&pcampaignid=web_share">
+      <img src="assets/googleplay.png" alt="Get it on Google Play"/>
+    </a>
   </div>
-  <a class="button" href="https://apps.apple.com/app/templater-graphics-and-video/id6749022452">
-    View on App Store
-  </a>
-  <!-- Android Section -->
-  <div class="platform" style="margin-top: 64px;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" />
-    <strong>Android</strong>
-  </div>
-  <a class="button" href="https://play.google.com/store/apps/details?id=com.templater.app&pcampaignid=web_share">
-    View on Google Play
-  </a>
 </body>
 </html>
